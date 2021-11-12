@@ -10,6 +10,6 @@ A quick description of your strapi application
 
 - API to sync submissions from submittable : http://localhost:1337/submissions/sync
 
-- API to get a submission : http://localhost:1337/submissions/1
+- API to get a submission : http://localhost:1337/submissions/{submission-id-in-our-db}
 
 - API for webhook (will be setup on Zapier) : http://localhost:1337/submissions/submit-submission

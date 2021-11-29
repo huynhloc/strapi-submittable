@@ -24,13 +24,15 @@ module.exports = {
     } = ctx.request.body;
 
     const entity = await strapi.services.submission.create({
-      submissionId,
-      projectId,
-      submitterId,
-      submitterFirstName,
-      submitterLastName,
-      submitterEmail,
-      submissionTitle,
+      submittableMetaData: {
+        submissionId,
+        projectId,
+        submitterId,
+        submitterFirstName,
+        submitterLastName,
+        submitterEmail,
+        submissionTitle,
+      },
     });
     return sanitizeEntity(entity, { model: strapi.models.submission });
   },
